@@ -35,7 +35,6 @@ print("\n")
 dataframe = pd.read_excel('emails.xlsx',engine ='openpyxl')  #here,we are baically creating a dataframe from the list sent that is present in the excel file 
 print("\n\nSo, there are about ",len(dataframe.index)," people whose account needs to be deleted\n\n")    #Total number of people in the list
 list_of_people=dataframe.values.tolist()
-identity_client = oci.identity.IdentityClient(config)   #connection made to the tenancy to get the list of regions subscribed to this tenancy
 list_of_people1=[]
 lst = []
 for a in list_of_people:
